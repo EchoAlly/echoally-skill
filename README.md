@@ -11,7 +11,7 @@ Open AI connections in the EchoAlly App and create a key. Use the **MCP URL show
 | Client | Installation |
 | --- | --- |
 | Codex | Install `skills/echoally` from this repository with the skill installer. Run `codex mcp add echoally --url https://echoally.ichunzhen.cn/mcp` then `codex mcp login echoally` if prompted. |
-| Claude Code | Run `/plugin marketplace add EchoElly/echoally-skill` then `/plugin install echoally@echoally-skills`. The plugin includes the default remote MCP URL. Open `/mcp` to authenticate. |
+| Claude Code | Run `/plugin marketplace add iChunzhen/echoally-skill` then `/plugin install echoally@echoally-skills`. The plugin includes the default remote MCP URL. Open `/mcp` to authenticate. |
 | WorkBuddy | Open Skills → Add skill → Upload skill and import the skill ZIP described below. Use your workspace's custom Streamable HTTP connector with the App URL and per-user OAuth where available, or configure the local runner. [Tencent skill guide](https://www.tencentcloud.com/document/product/1316/84503) |
 | Doubao Work | Start a Work task and import the local skill under 插件·技能·伙伴, or have Work mode install the `skills/echoally` folder. Use an available remote connector or configure the local runner. Start a new task after installation. [Local skills guide](https://docs.volcengine.com/docs/agent-toolkit/agent-auto-install-guide?lang=zh) |
 | ChatGPT | On the web choose Plugins → + → Add custom MCP server. Enter the App URL, select OAuth and finish connecting. Workspace policy controls availability. [OpenAI guide](https://developers.openai.com/plugins/deploy/connect-chatgpt) |
@@ -21,7 +21,7 @@ For a different deployment in Claude Code, install the skill folder under `~/.cl
 
 For a GitHub-capable desktop assistant, a single installation request is sufficient to start setup:
 
-> Install skills/echoally from https://github.com/EchoElly/echoally-skill, connect it to my EchoAlly account and show the available tools.
+> Install skills/echoally from https://github.com/iChunzhen/echoally-skill, connect it to my EchoAlly account and show the available tools.
 
 ## Local skill package and private key configuration
 

@@ -10,7 +10,7 @@
 
 | 使用端 | 安装与连接 |
 | --- | --- |
-| Claude Code | 依次执行 `/plugin marketplace add EchoElly/echoally-skill`、`/plugin install echoally@echoally-skills`。插件已配置默认 MCP，打开 `/mcp` 完成授权。 |
+| Claude Code | 依次执行 `/plugin marketplace add iChunzhen/echoally-skill`、`/plugin install echoally@echoally-skills`。插件已配置默认 MCP，打开 `/mcp` 完成授权。 |
 | Codex | 用 Skill 安装器安装本仓库的 `skills/echoally`。执行 `codex mcp add echoally --url https://echoally.ichunzhen.cn/mcp`，按提示完成授权。需要重新登录时执行 `codex mcp login echoally`。 |
 | WorkBuddy | 在「技能 → 添加技能 → 上传技能」导入下方的技能 ZIP。可在支持的工作区添加 Streamable HTTP 连接器，填 App 提供的 URL 并使用个人 OAuth，也可使用本地调用方式。[腾讯云安装说明](https://www.tencentcloud.com/document/product/1316/84503) |
 | 豆包工作 | 在工作模式启动任务，通过「插件·技能·伙伴」导入本地技能，或让工作模式安装本仓库的 `skills/echoally`。使用工作区已有的远程连接器或配置下方的本地调用方式，再新建任务启用。[火山引擎工作模式说明](https://docs.volcengine.com/docs/agent-toolkit/agent-auto-install-guide?lang=zh) |
@@ -19,7 +19,7 @@
 
 可执行安装任务的桌面 AI 也可以从这句话开始：
 
-> 请从 https://github.com/EchoElly/echoally-skill 安装 skills/echoally，连接我的 EchoAlly 账户，并列出当前可用工具。
+> 请从 https://github.com/iChunzhen/echoally-skill 安装 skills/echoally，连接我的 EchoAlly 账户，并列出当前可用工具。
 
 如果 App 展示其他环境地址，请在命令中替换 URL。Claude Code 使用自定义环境时，将技能目录复制到 `~/.claude/skills/`，再用 `claude mcp add --transport http --scope user echoally <APP_MCP_URL>` 添加该环境。Codex 如需为只读授权新增待办写权限，可按需申请，例如 `codex mcp login echoally --scopes todos:read,todos:write`。
 

@@ -1,0 +1,16 @@
+{
+  "name": "echoally-skills",
+  "owner": {
+    "name": "EchoAlly"
+  },
+  "plugins": [
+    {
+      "name": "echoally",
+      "source": "./",
+      "description": "EchoAlly skill and remote MCP connection"
+    }
+  ],
+  "metadata": {
+    "description": "EchoAlly agent tools and skills"
+  }
+}

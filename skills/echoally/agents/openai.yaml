@@ -1,0 +1,11 @@
+interface:
+  display_name: "EchoAlly"
+  short_description: "Read EchoAlly context and save notes or to-dos"
+  default_prompt: "Use $echoally to show my recent records and open to-dos."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "echoally"
+      description: "EchoAlly records, context, speakers, memos, and to-dos"
+      transport: "streamable_http"
+      url: "https://echoally.ichunzhen.cn/mcp"

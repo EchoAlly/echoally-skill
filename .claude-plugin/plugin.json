@@ -6,7 +6,7 @@
   "mcpServers": {
     "echoally": {
       "type": "http",
-      "url": "https://echoally.ichunzhen.cn/mcp"
+      "url": "https://dev.ichunzhen.cn/mcp"
     }
   }
 }

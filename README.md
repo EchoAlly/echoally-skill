@@ -23,6 +23,16 @@ For a GitHub-capable desktop assistant, a single installation request is suffici
 
 > Install skills/echoally from https://github.com/iChunzhen/echoally-skill, connect it to my EchoAlly account and show the available tools.
 
+## Update
+
+Ask your agent “Check for EchoAlly Skill updates.” The check compares the installed `VERSION` with the public version on `main`. It needs no EchoAlly credentials. In Python-enabled hosts you can also run `python3 scripts/check_update.py` from the installed skill folder.
+
+- **Claude Code plugin** — Run `claude plugin update echoally@echoally-skills`.
+- **Local skill** — Download the latest `skills/echoally` folder from this repository and replace the installed copy.
+- **ZIP import** — Rebuild the ZIP from the latest `main` using the command below and import it again.
+
+Keep your MCP configuration when updating the skill. When publishing, update `skills/echoally/VERSION` and the Claude Code plugin version together.
+
 ## Local skill package and private key configuration
 
 From the repository root, run `git archive --format=zip --prefix=echoally/ HEAD:skills/echoally -o echoally.zip` and import that ZIP where the host supports local skill packages. It includes the optional Python 3 runner for desktop hosts with command execution. It can also be installed by copying the entire `skills/echoally` directory into the host's skill directory.

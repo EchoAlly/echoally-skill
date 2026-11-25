@@ -23,6 +23,16 @@
 
 如果 App 展示其他环境地址，请在命令中替换 URL。Claude Code 使用自定义环境时，将技能目录复制到 `~/.claude/skills/`，再用 `claude mcp add --transport http --scope user echoally <APP_MCP_URL>` 添加该环境。Codex 如需为只读授权新增待办写权限，可按需申请，例如 `codex mcp login echoally --scopes todos:read,todos:write`。
 
+## 检查更新
+
+对 Agent 说「检查 EchoAlly Skill 更新」。它会比较本地 `VERSION` 和 GitHub `main` 上的公开版本号，检查时无需 EchoAlly 密钥。支持 Python 的客户端也可以在已安装的 Skill 目录执行 `python3 scripts/check_update.py`。
+
+- **Claude Code 插件** — 执行 `claude plugin update echoally@echoally-skills`。
+- **本地 Skill** — 从本仓库下载最新版的完整 `skills/echoally` 目录，替换旧版。
+- **ZIP 导入** — 使用下方命令从最新的 `main` 重新打包并导入。
+
+更新 Skill 时保留现有 MCP 配置。发布新版时同步更新 `skills/echoally/VERSION` 和 Claude Code 插件版本。
+
 ## 本地技能包和密钥
 
 在仓库根目录执行 `git archive --format=zip --prefix=echoally/ HEAD:skills/echoally -o echoally.zip`，即可生成上述 ZIP。支持本地目录的客户端也可直接导入完整的 `skills/echoally`。

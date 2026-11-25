@@ -29,6 +29,8 @@ From the repository root, run `git archive --format=zip --prefix=echoally/ HEAD:
 
 For the runner, configure `ECHOALLY_API_KEY` privately in the host's environment or secret manager before starting a task. A key grants all tools for its owner. For another deployment, set `ECHOALLY_MCP_URL` to the HTTPS URL displayed by that App. The runner never follows redirects. From the installed skill folder run `python3 scripts/echoally.py list` to verify the connection. In a native Codex setup you can select key authentication directly with `codex mcp add echoally --url https://dev.ichunzhen.cn/mcp --bearer-token-env-var ECHOALLY_API_KEY`.
 
+Tasks support a scheduled start and end as well as an independent deadline. Editing existing record Markdown over OAuth requires the separate `records:write` permission.
+
 ## Try it
 
 - “Show my three most recent EchoAlly record cards, with their titles.”

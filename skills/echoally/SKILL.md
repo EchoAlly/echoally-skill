@@ -21,7 +21,9 @@ Use the EchoAlly MCP tools available in this session. Check the tool list for th
 - Use `save_memo` for a standalone memo, including a user-requested brief or conclusion. Send a title and Markdown body. A saved memo does not change its source card.
 - Use `create_todo` for a new commitment. Keep date/time optional and send a UTC offset for a supplied due time. Resolve an ambiguous intended time with the user.
 - For either create operation, generate a UUID as `client_request_id` for this logical write. Reuse it and the same arguments if the delivery outcome is uncertain. A fresh key can create a duplicate.
+- For task schedules send `start_time` and `end_time` together with UTC offsets. `due_at` is a separate deadline. To clear the schedule send both boundaries as null, plus `all_day: false` if the task was all-day. For all-day schedules use local midnight and an exclusive end date.
 - For `update_todo`, get the exact target and its current version from `list_todos`, and send its ID, `expected_version`, and only the intended changes. On conflict, read the current state. If the requested change is already present, report that. If concurrent changes affect the user's intent, show the difference before proceeding.
+- To edit an existing record, use `update_record` only when the user asks to change that record. Read the current version with `get_record`, then send the ID, `expected_version`, and the complete replacement `content_md`. The read projection strips some markup such as diagrams and images. If that affects content that must be preserved, ask for the full replacement or direct the user to the App editor. This tool requires the separate `records:write` permission. On a version conflict, read the latest version before proposing a new edit.
 - Report the saved object's ID from the service receipt. Treat an error or timeout as an unconfirmed write.
 
 ## Local skill runner

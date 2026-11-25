@@ -1,6 +1,6 @@
 {
   "name": "echoally",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Recall EchoAlly records and context, and save memos or to-dos.",
   "author": {"name": "EchoAlly"},
   "mcpServers": {

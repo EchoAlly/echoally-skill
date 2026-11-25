@@ -29,6 +29,8 @@
 
 对于支持执行 Python 3 的本地桌面技能，在宿主的私密环境变量或凭据管理器内配置 `ECHOALLY_API_KEY`，再启动新任务。此密钥拥有本账号的全部工具权限。其他部署使用 `ECHOALLY_MCP_URL` 指定 App 显示的 HTTPS 地址。在已安装的技能目录执行 `python3 scripts/echoally.py list` 验证连接。Codex 原生 MCP 也支持通过环境变量获取密钥，使用 `codex mcp add echoally --url https://dev.ichunzhen.cn/mcp --bearer-token-env-var ECHOALLY_API_KEY` 配置。
 
+待办支持执行时段和独立截止时间。浏览器 OAuth 用户需要另行授予 `records:write` 才能编辑现有记录正文。
+
 ## 验证
 
 先试「列出我最近三张 EchoAlly 记录卡片」，再试「把刚才的结论保存为 EchoAlly 备忘，告诉我保存后的 ID」。本地测试命令为 `python3 -m unittest discover -s tests -v`，使用临时 HTTPS 服务和测试密钥，需要系统可执行 `openssl`。

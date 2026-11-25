@@ -8,4 +8,4 @@ dependencies:
       value: "echoally"
       description: "EchoAlly records, context, speakers, memos, and to-dos"
       transport: "streamable_http"
-      url: "https://echoally.ichunzhen.cn/mcp"
+      url: "https://dev.ichunzhen.cn/mcp"

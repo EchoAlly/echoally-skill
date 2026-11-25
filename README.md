@@ -6,11 +6,11 @@ Connect your AI assistant to your EchoAlly account to read record cards, saved s
 
 ## Connect
 
-Open AI connections in the EchoAlly App and create a key. Use the **MCP URL shown in the App** for your deployment. The default is `https://echoally.ichunzhen.cn/mcp`. For OAuth connections, enter the key on the **EchoAlly authorization page** and select the permissions you want. Keep your key out of chats, commands and Git. Disconnect an OAuth client individually in the App. Rotating the App key also invalidates connections authorized by that key.
+Open AI connections in the EchoAlly App and create a key. Use the **MCP URL shown in the App** for your deployment. The default is `https://dev.ichunzhen.cn/mcp`. For OAuth connections, enter the key on the **EchoAlly authorization page** and select the permissions you want. Keep your key out of chats, commands and Git. Disconnect an OAuth client individually in the App. Rotating the App key also invalidates connections authorized by that key. If you previously authorized the old endpoint, reconnect from the new URL and complete OAuth again.
 
 | Client | Installation |
 | --- | --- |
-| Codex | Install `skills/echoally` from this repository with the skill installer. Run `codex mcp add echoally --url https://echoally.ichunzhen.cn/mcp` then `codex mcp login echoally` if prompted. |
+| Codex | Install `skills/echoally` from this repository with the skill installer. Run `codex mcp add echoally --url https://dev.ichunzhen.cn/mcp` then `codex mcp login echoally` if prompted. |
 | Claude Code | Run `/plugin marketplace add iChunzhen/echoally-skill` then `/plugin install echoally@echoally-skills`. The plugin includes the default remote MCP URL. Open `/mcp` to authenticate. |
 | WorkBuddy | Open Skills → Add skill → Upload skill and import the skill ZIP described below. Use your workspace's custom Streamable HTTP connector with the App URL and per-user OAuth where available, or configure the local runner. [Tencent skill guide](https://www.tencentcloud.com/document/product/1316/84503) |
 | Doubao Work | Start a Work task and import the local skill under 插件·技能·伙伴, or have Work mode install the `skills/echoally` folder. Use an available remote connector or configure the local runner. Start a new task after installation. [Local skills guide](https://docs.volcengine.com/docs/agent-toolkit/agent-auto-install-guide?lang=zh) |
@@ -27,7 +27,9 @@ For a GitHub-capable desktop assistant, a single installation request is suffici
 
 From the repository root, run `git archive --format=zip --prefix=echoally/ HEAD:skills/echoally -o echoally.zip` and import that ZIP where the host supports local skill packages. It includes the optional Python 3 runner for desktop hosts with command execution. It can also be installed by copying the entire `skills/echoally` directory into the host's skill directory.
 
-For the runner, configure `ECHOALLY_API_KEY` privately in the host's environment or secret manager before starting a task. A key grants all tools for its owner. For another deployment, set `ECHOALLY_MCP_URL` to the HTTPS URL displayed by that App. The runner never follows redirects. From the installed skill folder run `python3 scripts/echoally.py list` to verify the connection. In a native Codex setup you can select key authentication directly with `codex mcp add echoally --url https://echoally.ichunzhen.cn/mcp --bearer-token-env-var ECHOALLY_API_KEY`.
+For the runner, configure `ECHOALLY_API_KEY` privately in the host's environment or secret manager before starting a task. A key grants all tools for its owner. For another deployment, set `ECHOALLY_MCP_URL` to the HTTPS URL displayed by that App. The runner never follows redirects. From the installed skill folder run `python3 scripts/echoally.py list` to verify the connection. In a native Codex setup you can select key authentication directly with `codex mcp add echoally --url https://dev.ichunzhen.cn/mcp --bearer-token-env-var ECHOALLY_API_KEY`.
+
+Tasks support a scheduled start and end as well as an independent deadline. Editing existing record Markdown over OAuth requires the separate `records:write` permission.
 
 ## Try it
 

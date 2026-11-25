@@ -10,7 +10,7 @@ from urllib.parse import urlsplit
 from urllib.request import HTTPRedirectHandler, HTTPSHandler, Request, build_opener
 
 
-DEFAULT_ENDPOINT = "https://echoally.ichunzhen.cn/mcp"
+DEFAULT_ENDPOINT = "https://dev.ichunzhen.cn/mcp"
 PROTOCOL_VERSIONS = ("2025-11-25", "2025-06-18", "2025-03-26")
 MAX_RESPONSE = 8 * 1024 * 1024
 

@@ -9,9 +9,9 @@ Respond in the user's language. For account data, use the EchoAlly MCP tools ava
 
 ## Check for updates
 
-When the user asks about the installed version, read `VERSION` beside this file. When they ask to check for an update, run `python3 scripts/check_update.py` from the skill folder. If the host can browse but cannot run Python, read the local version and compare it numerically with the public [VERSION file](https://raw.githubusercontent.com/iChunzhen/echoally-skill/main/skills/echoally/VERSION). If either version cannot be verified, report the limitation.
+When the user asks about the installed version, read `VERSION` beside this file. When they ask to check for an update, run `python3 scripts/check_update.py` from the skill folder. If the host can browse but cannot run Python, read the local version and compare it numerically with the public [VERSION file](https://raw.githubusercontent.com/EchoAlly/echoally-skill/main/skills/echoally/VERSION). If either version cannot be verified, report the limitation.
 
-If an update is available, report both versions and link to the [official installation instructions](https://github.com/iChunzhen/echoally-skill/blob/main/README.md#update). Claude Code marketplace installations use `claude plugin update echoally@echoally-skills`; local installs replace the skill folder; ZIP installs reimport the updated package. A version check only reads public metadata and must not install files, use account credentials, or change MCP settings. Do not check during unrelated tasks.
+If an update is available, report both versions and link to the [official installation instructions](https://github.com/EchoAlly/echoally-skill/blob/main/README.md#update). Claude Code marketplace installations use `claude plugin update echoally@echoally-skills`; local installs replace the skill folder; ZIP installs reimport the updated package. A version check only reads public metadata and must not install files, use account credentials, or change MCP settings. Do not check during unrelated tasks.
 
 ## Read
 

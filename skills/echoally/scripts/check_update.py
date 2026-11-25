@@ -8,7 +8,7 @@ import sys
 from urllib.request import urlopen
 
 
-VERSION_URL = "https://raw.githubusercontent.com/iChunzhen/echoally-skill/main/skills/echoally/VERSION"
+VERSION_URL = "https://raw.githubusercontent.com/EchoAlly/echoally-skill/main/skills/echoally/VERSION"
 LOCAL_VERSION = Path(__file__).resolve().parents[1] / "VERSION"
 
 
